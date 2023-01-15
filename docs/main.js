@@ -26,21 +26,24 @@ document.addEventListener("DOMContentLoaded", () => {
       elements: {
         point: {
           radius: 0
+        },
+        line: {
+          borderColor: '#fafafa'
         }
       },
       scales: {
-        x: [{
+        x: {
           display: false,
           ticks: {
             display: false //this will remove only the label
           }
-        }],
-        y: [{
+        },
+        y: {
           display: false,
           ticks: {
             display: false //this will remove only the label
           }
-        }]
+        }
       }
     }
   });
