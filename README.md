@@ -16,12 +16,22 @@
 * Total Greenhouse Gases
 * CO2
 
+### Representation
+
+1. Global Mean Temperature (GMT)
+  * Show GMT as number of latest temperature.
+2. CO2 Emissions
+  * Show CO2 emissions by country as pixels, make scrollable. How to visulize without shaming a country?
+  * Maybe just show development of emissions over the years
+
+
 ## Questions
 
 1. What are the pre-industrial levels?
    1. Years: 1850–1900
 2. Where to find the CO2 emission limits by country?
 3. How to measure global warming (temparature)?
+   * NASA provides measurements: <https://climate.nasa.gov/vital-signs/global-temperature/>
 
 ## References
 
