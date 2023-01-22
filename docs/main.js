@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
         x: {
           display: false,
           ticks: {
-            display: false //this will remove only the label
+            display: false
           }
         },
         y: {
           display: false,
           ticks: {
-            display: false //this will remove only the label
+            display: false
           }
         }
       }
