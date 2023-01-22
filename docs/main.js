@@ -1,19 +1,10 @@
-import participants from "./data/participants.json" assert { type: "json" };
-import globalMeanTemps from "./data/global-mean-temp-land-ocean.json" assert { type: "json" };
-
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".main-header");
-  const headerBody = header.querySelector(".main-header__body");
-  const currentTemperature = globalMeanTemps[globalMeanTemps.length - 1]
-  headerBody.innerHTML = `${currentTemperature.lowess5} °C`
-
-  const globalMeanTempChart = document.getElementById("globalMeanTempChart");
-  new Chart(globalMeanTempChart, {
+function plotGlobalMeanTempsChart(data, parentElement) {
+  new Chart(parentElement, {
     type: "line",
     data: {
-      labels: globalMeanTemps.map(t => t.year),
+      labels: data.map(t => t.year),
       datasets: [{
-        data: globalMeanTemps.map(t => t.lowess5),
+        data: data.map(t => t.lowess5),
       }]
     },
     options: {
@@ -47,4 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-})
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const header = document.querySelector(".main-header");
+  const headerBody = header.querySelector(".main-header__body");
+  // const participantsRequest = await fetch("./data/participants.json");
+  // const participants = await participantsRequest.json();
+  const globalMeanTempsRequest = await fetch("./data/global-mean-temp-land-ocean.json")
+  const globalMeanTemps = await globalMeanTempsRequest.json();
+  const currentTemperature = globalMeanTemps[globalMeanTemps.length - 1];
+  headerBody.innerHTML = `${currentTemperature.lowess5} °C`;
+
+  const globalMeanTempChart = document.getElementById("globalMeanTempChart");
+  plotGlobalMeanTempsChart(globalMeanTemps, globalMeanTempChart)
+});
