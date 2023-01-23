@@ -15,6 +15,10 @@
 * Global Mean Temperature
 * Total Greenhouse Gases
 * CO2
+* Consumption
+  * Put it better into perspective. Lot's of people don't understand impact of certain things.
+  * What's our budget?
+  * Car, plane, bike etc.
 
 ### Representation
 
