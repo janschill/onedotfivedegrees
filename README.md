@@ -41,4 +41,4 @@
 
 * <https://github.com/owid/co2-data>
 * <https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/02c8510dd9c17369abf95ecb21af9695b6bb2b37/slim-3/slim-3.json>
-*
+* <https://datahub.io/collections/climate-change>
